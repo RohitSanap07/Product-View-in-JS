@@ -24,22 +24,52 @@
 }
 
 #main-product-image{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    width: 120px;
+    height: 120px;
+       object-fit: fill;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
     display: block;
     margin: 25px auto;
+    padding: 1px;
 }
+.product-images-container{
+    display: flex;
+    justify-content: center;
+}
+.product-images{
+        height: 60px;
+        width: 60px;
+        object-fit: fill;
+        border: 1px solid black;
+        border-radius: 4px;
+        margin: 10px;
+        padding: 1px;
+        cursor: pointer;
 
+    }
 </style>
-
-
 </head>
 <body>
-    <h3 class="heading">My Mobile Phone📱<br><p class="heading1">Specifications</p></h3>
+    <h3 class="heading">My Mobile Phone📱<br><p class="heading1">Realme 12 5G</p></h3>
     <img src="mobile.jpg" id="main-product-image">
+    <p class="heading1">-Specifications-</p>
+    <div class="product-images-container">
+        <img src="mobile.jpg"  class="product-images" onclick="changeImage('mobile.jpg')">
+        <img src="mobile11.jpg" class="product-images" onclick="changeImage('mobile11.jpg')">
+        <img src="mobile12.jpg"  class="product-images" onclick="changeImage('mobile12.jpg')">
+        <img src="mobile13.jpg"  class="product-images" onclick="changeImage('mobile13.jpg')">
+        <img src="mobile15.jpg"  class="product-images" onclick="changeImage('mobile15.jpg')">
+
+        
+    </div>
+    <script>
+        function changeImage(imageName){
+            const mainImage = document.getElementById('main-product-image');
+            mainImage.src = imageName;
+        }
+    </script>
+
 </body>
 </html>
